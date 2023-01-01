@@ -27,9 +27,11 @@
     background-color: lightblue;
     transform: rotateY(180deg);
     pointer-events: none;
+    z-index: -1;
   }
 
   &__back {
+    transform: translateZ(0);
     backface-visibility: hidden;
     background-image: linear-gradient(
         49deg,
@@ -46,6 +48,7 @@
 
   &__back::before {
     content: '?';
+
     position: absolute;
     display: flex;
     justify-content: center;

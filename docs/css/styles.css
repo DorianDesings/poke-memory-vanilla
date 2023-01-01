@@ -427,8 +427,10 @@ body {
   background-color: lightblue;
   transform: rotateY(180deg);
   pointer-events: none;
+  z-index: -1;
 }
 .card__back {
+  transform: translateZ(0);
   backface-visibility: hidden;
   background-image: linear-gradient(49deg, rgba(0, 0, 0, 0.1) 50%, transparent 40%), linear-gradient(var(--red) 48.5%, var(--black) 48.5%, var(--black) 52.5%, var(--white) 52.5%);
 }
