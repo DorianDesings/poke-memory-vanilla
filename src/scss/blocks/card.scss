@@ -1,0 +1,73 @@
+.card {
+  position: relative;
+  width: 200px;
+  height: 225px;
+  color: var(--blue);
+  border: 2px solid var(--black);
+  font-size: 3rem;
+  border-radius: 8px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+
+  &__front,
+  &__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  &__front {
+    background-color: lightblue;
+    transform: rotateY(180deg);
+    pointer-events: none;
+  }
+
+  &__back {
+    backface-visibility: hidden;
+    background-image: linear-gradient(
+        49deg,
+        rgba(0, 0, 0, 0.1) 50%,
+        transparent 40%
+      ),
+      linear-gradient(
+        var(--red) 48.5%,
+        var(--black) 48.5%,
+        var(--black) 52.5%,
+        var(--white) 52.5%
+      );
+  }
+
+  &__back::before {
+    content: '?';
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    background-color: var(--white);
+    border: 7px solid var(--black);
+    border-radius: 50%;
+    color: #000;
+    background-image: linear-gradient(
+      49deg,
+      rgba(0, 0, 0, 0.05) 50%,
+      transparent 40%
+    );
+  }
+
+  &__image {
+    max-width: 85%;
+  }
+
+  &--show {
+    transform: rotateY(180deg);
+  }
+}

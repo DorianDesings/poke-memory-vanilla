@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CAMBIAR POR styles.min.css al finalizar el proyecto -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Poke Memory game</title>
+  </head>
+
+  <body>
+    <main class="main">
+      <!-- MARCADOR -->
+      <div class="game-info">
+        <p id="points" class="game-info__points">Total Points: 0</p>
+        <p id="combo" class="game-info__combo"></p>
+        <p id="fails" class="game-info__fails">Fails: 0</p>
+      </div>
+      <!-- GAME BOARD -->
+      <div id="game-board" class="game-board"></div>
+      <!-- FINISH GAME -->
+      <div id="modal" class="modal">
+        <p class="modal__title">HAS GANADO!!</p>
+        <p id="final-points" class="modal__final-points">
+          Has conseguido 4000 puntos
+        </p>
+        <p id="final-moves" class="modal__final-moves">
+          Has hecho un total de 100 movimientos con 16 fallos
+        </p>
+        <button id="restart-button" class="modal__button">
+          JUGAR DE NUEVO
+        </button>
+      </div>
+    </main>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

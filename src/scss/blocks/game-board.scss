@@ -1,0 +1,10 @@
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+  background-color: var(--dark-blue);
+  width: 100%;
+  // perspective: 1000px;
+  // perspective-origin: center;
+}
